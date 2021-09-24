@@ -35,7 +35,7 @@ const EditUser = ()=>{
     }
 
     const onValueChange =(e)=>{
-        console.log(e.target.value)
+        // console.log(e.target.value)
         setUsers({...user,[e.target.name]:e.target.value})
         console.log(user);
     }
@@ -46,8 +46,6 @@ const EditUser = ()=>{
         // history.push('./edit');
     }
     return(
-        
-        
         <FormGroup className={classes.container}>
             <Typography variant='h4'>Edit Details</Typography>
             <FormControl>

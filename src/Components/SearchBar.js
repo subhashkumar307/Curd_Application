@@ -1,82 +1,55 @@
-import React, { useState,useEffect } from "react";
-import { getUsers,deleteUser } from "../Sevice/api";
-
 import axios from "axios";
+import React, { useState, useEffect } from "react";
 
 
+const url = "http://localhost:3003/user"
 const SearchBar = () => {
-    const [data, setData] = useState({})
-    const [search, setSearch] = useState({})
+    const [allData, setAllData] = useState([]);
+    const [filteredData, setFilteredData] = useState(allData);
+    const getData = async () => {
+        try {
+            const res = await axios.get(`${url}`)
+            console.log(res.data);
+        } catch (error) {
 
-    
-
-        // axios.get('../Database/Db.json')
-        //     .then((res) => {
-        //         console.log(res.data);
-        //     }).catch((err) => {
-        //         console.log(err);
-        //     }
-        
-        // axios.get('../Database/Db.json')
-        // .then((res)=>{
-        //     console.log(res.data);
-        // })
-        // .catch((err)=>{
-        //     console.log(err);
-        // })
-        // async function fetchUsersFromGithub() {
-        //     const response = await fetch('../Database/Db.json')
-        
-        //     const data = await response.json()
-        
-        //     console.log(data);
-        // }
-        
-        // fetchUsersFromGithub()
-        const [user,setUsers] =useState([]);
-
-        useEffect(()=>{
-            getAllUsers();
-    
-        },[] )
-    
-        
-    
-        const getAllUsers = async() =>{
-            const response= await getUsers()
-            console.log(response.data);
-            setData(response.data)
-    
         }
+    }
+    useEffect(() => {
+        axios('http://localhost:3003/user')
+            .then(response => {
+                console.log(response.data)
+                setAllData(response.data);
+                setFilteredData(response.name);
+            })
+            .catch(error => {
+                console.log('Error getting fake data: ' + error);
+            })
+        getData()
+    }, [])
 
+    const getresult = (e) => {
+        e.preventDefault()
+        axios.get("http://localhost:3003/user")
+         .then(response => console.log(response.data[0].name))
 
-                return (
-                    <>
-                        <form action="/" method="get">
-                            <label htmlFor="header-search">
-                                <span className="visually-hidden"></span>
-                            </label>
-                            <input
-                                type="text"
-                                id="header-search"
-                                placeholder="Enter the Warehouse Name"
-                                name="s"
-                            onChange={(e)=>setSearch(e.target.value)}/>
-                            <button  type="submit" >Search</button>
-                            {/* <button onClick={fetchDetails} type="submit" >Search</button> */}
-                        </form>
-                        {
-                            data.filter((val)=>{
-                                if(search=''){
-                                    return val;
-                                }
-                                else if(val.name.toLowerCase().include(search.toLowerCase())){
-                                    return
-                                }
-                            })
-                        }
-                    </>
-                )
-            }
+    }
 
-export default SearchBar
+    return (
+        <>
+            <form action="/" method="get">
+                <label htmlFor="header-search">
+                    <span className="visually-hidden">Enter the Warehouse Name</span>
+                </label>
+                <input
+                    type="text"
+                    id="header-search"
+                    placeholder="Enter the Warehouse Name"
+                    name="s"
+                />
+                <button type="submit" onClick={getresult}>Search</button>
+            </form>
+        </>
+    );
+}
+
+export default SearchBar;

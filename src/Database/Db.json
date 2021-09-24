@@ -4,7 +4,7 @@
       "name": "Warehouse-165",
       "code": "W-00001",
       "id": 1,
-      "city": "Delhi",
+      "city": "Delhi123",
       "space_available": 1234,
       "type": "Leasable Space",
       "cluster": "cluster-a-32",

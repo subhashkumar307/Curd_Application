@@ -1,22 +1,9 @@
 import { Box, Typography } from '@material-ui/core';
-//import { makestyles } from '@material-ui/core';
-
 import manage from '../Asses/AssesImage/Management5.jpg';
-
 import manget from '../Asses/AssesImage/Management7.jpg';
 
 
-// const useStyle = makestyles({
-//     image:{
-//         width:"50%",
-//         hight:"50%"
-//     }
-// })
-
-
-
 const Codefor = () => {
-    // const classes = useStyle();
     return (
 
         <Box styele={{ margin: 50, fontSize: '20px' }} >
