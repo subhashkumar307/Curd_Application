@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/Curd_Application/static/css/main.8964d174.chunk.css",
+    "main.js": "/Curd_Application/static/js/main.e5a42dcc.chunk.js",
+    "main.js.map": "/Curd_Application/static/js/main.e5a42dcc.chunk.js.map",
+    "runtime-main.js": "/Curd_Application/static/js/runtime-main.115ca6be.js",
+    "runtime-main.js.map": "/Curd_Application/static/js/runtime-main.115ca6be.js.map",
+    "static/js/2.a6df39ab.chunk.js": "/Curd_Application/static/js/2.a6df39ab.chunk.js",
+    "static/js/2.a6df39ab.chunk.js.map": "/Curd_Application/static/js/2.a6df39ab.chunk.js.map",
+    "index.html": "/Curd_Application/index.html",
+    "static/css/main.8964d174.chunk.css.map": "/Curd_Application/static/css/main.8964d174.chunk.css.map",
+    "static/js/2.a6df39ab.chunk.js.LICENSE.txt": "/Curd_Application/static/js/2.a6df39ab.chunk.js.LICENSE.txt",
+    "static/media/Management5.6c733c2c.jpg": "/Curd_Application/static/media/Management5.6c733c2c.jpg",
+    "static/media/Management7.521b9d42.jpg": "/Curd_Application/static/media/Management7.521b9d42.jpg",
+    "static/media/NotFound.bb1d5b46.jpg": "/Curd_Application/static/media/NotFound.bb1d5b46.jpg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.115ca6be.js",
+    "static/js/2.a6df39ab.chunk.js",
+    "static/css/main.8964d174.chunk.css",
+    "static/js/main.e5a42dcc.chunk.js"
+  ]
+}
